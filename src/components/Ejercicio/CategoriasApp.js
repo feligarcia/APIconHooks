@@ -4,11 +4,11 @@ import CategoriasList from './CategoriasList';
 import CategoriesAdd from './CategoriesAdd';
 
 const CategoriasApp = () => {
-        const [categorias, setCategorias] = useState([]);
-        const [nombre, setNombre] = useState('Horror');
-        // const [stateImages, setStateImages] = useState ([]);
+        const [categorias, setCategorias] = useState(['Horror']);
+        
+        //const [stateImages, setStateImages] = useState ([]);
         const imgGif = async () =>{
-            const url = `https://api.giphy.com/v1/gifs/search?q=${categorias}&limit=10&api_key=EORuBCNTur03nFTrrJn2P7VOe0wBQUEd`
+            const url = `https://api.giphy.com/v1/gifs/search?q=${encodeURI(categorias)}&limit=10&api_key=EORuBCNTur03nFTrrJn2P7VOe0wBQUEd`
             const resp = await fetch(url)
             const {data} = await resp.json()
     
@@ -29,18 +29,15 @@ const CategoriasApp = () => {
     
 
 
-        const handledAdd = () =>{
-        setNombre('Risas')
-}
 
   return (
   <div>
     <h1>Componentes con hooks</h1>
       <ol>
-        <CategoriesAdd setCategorias={categorias} />
+        <CategoriesAdd setCategorias={setCategorias} />
         <CategoriasList  categorias={categorias} />
       </ol>
-      <Button variant="warning" type='button' onClick={handledAdd}>Agregar</Button>
+      {/* <Button variant="warning" type='button' onClick={handledAdd}>Agregar</Button> */}
 
   </div>);
 }

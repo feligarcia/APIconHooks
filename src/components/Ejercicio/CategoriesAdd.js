@@ -31,7 +31,7 @@ const CategoriesAdd =({setCategorias}) => {
                     <input
                     ref={searchref}
                     name="search"
-                    placeholder="categories"
+                    placeholder="categorias"
                     value={search}
                     onChange={handleInputChange}
                 />
