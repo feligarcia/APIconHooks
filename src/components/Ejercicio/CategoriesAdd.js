@@ -1,22 +1,23 @@
 import React from 'react';
 import { useState, useRef, useEffect } from 'react';
 
-const CategoriesAdd =({setCategorias}) => {
+const CategoriesAdd =({setNombre}) => {
 
         const [search, setSearch] = useState('');
+        
         const searchref = useRef()
-
-
+        
 
         const handleSubmit = (e) =>{
                 e.preventDefault()
-                setCategorias(categorias=>[search,...categorias])
+                setNombre(nombre=> search)
                 setSearch('')            
             }
-
+            
 
         const handleInputChange = (e) =>{
             setSearch(e.target.value)
+            
         }
 
         useEffect(() => {
