@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/APIconHooks/static/css/main.1a8a0596.css",
+    "main.js": "/APIconHooks/static/js/main.75868d59.js",
+    "index.html": "/APIconHooks/index.html",
+    "main.1a8a0596.css.map": "/APIconHooks/static/css/main.1a8a0596.css.map",
+    "main.75868d59.js.map": "/APIconHooks/static/js/main.75868d59.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1a8a0596.css",
+    "static/js/main.75868d59.js"
+  ]
+}
